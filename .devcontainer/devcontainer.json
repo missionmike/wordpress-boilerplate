@@ -18,7 +18,7 @@
 		"ghcr.io/devcontainers/features/git:1": {}
 	},
 	"onCreateCommand": "sudo chmod +x .devcontainer/install-tools.sh && .devcontainer/install-tools.sh",
-	"postCreateCommand": "export $(grep -v '^#' .env | xargs) && sudo chmod +x .devcontainer/setup.sh && .devcontainer/setup.sh",
+	"postCreateCommand": "sudo chmod +x .devcontainer/setup.sh && .devcontainer/setup.sh",
 	"forwardPorts": [8080],
 	"remoteUser": "wordpress",
 	"customizations": {
