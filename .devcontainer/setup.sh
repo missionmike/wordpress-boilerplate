@@ -10,7 +10,7 @@ workspace_basedir=/workspaces/wordpress-boilerplate
 cd $workspace_basedir
 
 # Load environment variables.
-export $(grep -v '^#' .env | xargs)
+export $(grep -v '^#' settings.env | xargs)
 
 # Install dependencies.
 npm install
