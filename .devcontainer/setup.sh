@@ -20,11 +20,13 @@ cd /var/www/html
 echo "Setting up WordPress at $SITE_HOST"
 
 # Remove previous core files.
-echo "Removing wp-admin and wp-includes..."
+echo "Removing wp-admin, wp-includes and root files..."
 rm -rf wp-admin wp-includes
+rm -rf ./*.php ./*.html ./*.txt
 echo "Done."
 
 wp core download --skip-content --force --version="$WP_CORE_VERSION"
+wp config create --dbhost="db" --dbname="exampledb" --dbuser="exampleuser" --dbpass="examplepass"
 wp core install --url="$SITE_HOST" --title="WordPress Trunk" --admin_user="admin" --admin_email="admin@example.com" --admin_password="password" --skip-email
 
 # Remove previous plugins.
