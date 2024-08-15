@@ -1,4 +1,4 @@
-# WordPress Boilerplate
+# WordPress Minimal Reproduction Boilerplate
 
 Base WordPress VS Code Dev Container used to scaffold minimal reproductions for troubleshooting
 issues.
